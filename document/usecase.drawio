@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-11-02T01:57:40.093Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="XHSm0fk7rBScaMD_FiDI" version="22.0.8" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-02T02:01:34.023Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="-osDWu-maRS8sN0iMG3C" version="22.0.8" type="github">
   <diagram name="페이지-1" id="31EgaM5gPdeL9ONdDeEs">
     <mxGraphModel dx="1418" dy="751" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -43,7 +43,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="hyORK3OSxc5vSRg9WI-D-15" value="게시판 정렬하기" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
-          <mxGeometry x="400" y="240" width="120" height="40" as="geometry" />
+          <mxGeometry x="390" y="250" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="hyORK3OSxc5vSRg9WI-D-35" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;dashed=1;" edge="1" parent="1" source="hyORK3OSxc5vSRg9WI-D-16">
           <mxGeometry relative="1" as="geometry">
@@ -51,17 +51,23 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="hyORK3OSxc5vSRg9WI-D-16" value="게시판 검색" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
-          <mxGeometry x="400" y="330" width="120" height="40" as="geometry" />
+          <mxGeometry x="390" y="320" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="hyORK3OSxc5vSRg9WI-D-38" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;dashed=1;" edge="1" parent="1" source="hyORK3OSxc5vSRg9WI-D-17">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="310" y="470" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="hyORK3OSxc5vSRg9WI-D-47" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="hyORK3OSxc5vSRg9WI-D-17" target="hyORK3OSxc5vSRg9WI-D-39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="hyORK3OSxc5vSRg9WI-D-17" value="게시판 쓰기, 수정, 삭제" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
           <mxGeometry x="390" y="450" width="140" height="40" as="geometry" />
         </mxCell>
         <mxCell id="hyORK3OSxc5vSRg9WI-D-37" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="hyORK3OSxc5vSRg9WI-D-18" target="hyORK3OSxc5vSRg9WI-D-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hyORK3OSxc5vSRg9WI-D-48" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="hyORK3OSxc5vSRg9WI-D-18" target="hyORK3OSxc5vSRg9WI-D-39">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="hyORK3OSxc5vSRg9WI-D-18" value="댓글 보기, 쓰기, &lt;br&gt;수정, 삭제" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
@@ -116,11 +122,14 @@
             <Array as="points" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="hyORK3OSxc5vSRg9WI-D-42" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="hyORK3OSxc5vSRg9WI-D-39" target="hyORK3OSxc5vSRg9WI-D-10">
+        <mxCell id="hyORK3OSxc5vSRg9WI-D-42" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="hyORK3OSxc5vSRg9WI-D-39" target="hyORK3OSxc5vSRg9WI-D-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hyORK3OSxc5vSRg9WI-D-45" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="hyORK3OSxc5vSRg9WI-D-39" target="hyORK3OSxc5vSRg9WI-D-11">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="hyORK3OSxc5vSRg9WI-D-39" value="DB" style="html=1;dropTarget=0;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="730" y="250" width="90" height="100" as="geometry" />
+          <mxGeometry x="730" y="290" width="90" height="100" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
