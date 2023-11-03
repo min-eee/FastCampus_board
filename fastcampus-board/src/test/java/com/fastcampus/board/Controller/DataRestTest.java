@@ -1,5 +1,6 @@
 package com.fastcampus.board.Controller;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+@Disabled("Spring Data REST 통합테스트는 불필요 하므로 제외시킴")
 @DisplayName("Data REST - API 테스트")
 @Transactional
 // 이 내용은 integration 테스트이므로 이 API가 실행한 결과가 리포지토리까지 저부 다 실행을 시켜서
@@ -23,6 +25,11 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest
 public class DataRestTest {
 
+
+    // 평범한 테스트 라면 integrationTest 의 integration cycle 을 끊을 수 있음.
+    // 예를 들어, 지금 이건 Spring Boot 테스트 이기는 하지만 MocMvc에서 호출할 것으로 예상되는 레포지토리가 있다.
+    // article repository와 articleComment repository를 Mocking 하여 중간에 repository까지 접근하는 코드의 흐름을 끊을 수 있다.
+    // Spring DataList 가 아니었다면 가능하다.
     private final MockMvc mvc;
 
     public DataRestTest(@Autowired MockMvc mvc){
