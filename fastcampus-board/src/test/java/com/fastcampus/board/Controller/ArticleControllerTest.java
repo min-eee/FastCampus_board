@@ -37,7 +37,7 @@ class ArticleControllerTest {
                 .andExpect(model().attributeExists("articles"));
     }
 
-    @Disabled("구현 중")
+
     @DisplayName("[view] [GET] 게시글 리스트 상세 페이지 - 정상호출")
     @Test
     public void givenNoting_whenRequestingArticleView_thenReturnsArticleView() throws Exception {
