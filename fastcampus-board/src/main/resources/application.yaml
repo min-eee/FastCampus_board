@@ -25,6 +25,7 @@ spring:
     rest:
       detection-strategy: annotated
       base-path: /api
+  thymeleaf3.decoupled-logic: true
 
 ---
 
