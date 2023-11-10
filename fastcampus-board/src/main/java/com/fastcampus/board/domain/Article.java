@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Set;
 
 @Getter
-@ToString
+@ToString(callSuper = true)
 @Table(indexes = {
                  @Index(columnList = "title")
                 ,@Index(columnList = "hashtag")
@@ -25,6 +25,10 @@ public class Article extends AuditingFields {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Setter
+    @ManyToOne(optional = false)
+    private UserAccount userAccount;
 
     @Setter
     @Column(nullable = false)
@@ -39,8 +43,8 @@ public class Article extends AuditingFields {
 
     @ToString.Exclude
     // circular referencing 이슈가 생길 수 있음. 순환참조때문에 메모리의 과부하로 서버 꺼질 수 있음. ToString 둘 중 하나는 끊어줘야함.
+    @OrderBy("createdAt DESC")
     @OneToMany(mappedBy = "article", cascade = CascadeType.ALL)
-    @OrderBy("id")
     private final Set<ArticleComment> articleComments = new LinkedHashSet<>();
 
 
@@ -50,15 +54,15 @@ public class Article extends AuditingFields {
 
     }
 
-    public Article(String title, String content, String hashtag) {
+    private Article(UserAccount userAccount, String title, String content, String hashtag){
         this.title = title;
         this.content = content;
         this.hashtag = hashtag;
     }
 
-    public static Article of(String title, String content, String hashtag){
+    public static Article of(UserAccount userAccount, String title, String content, String hashtag){
 
-        return new Article(title, content, hashtag);
+        return new Article(userAccount, title, content, hashtag);
     }
 
     @Override

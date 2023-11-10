@@ -1,0 +1,10 @@
+package com.fastcampus.board.domain.type;
+
+public enum SearchType {
+
+    TITLE,
+    CONTENT,
+    ID,
+    NICNAME,
+    HASHTAG
+}
