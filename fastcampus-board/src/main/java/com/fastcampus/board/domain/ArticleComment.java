@@ -8,7 +8,7 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Getter
-@ToString
+@ToString(callSuper = true)
 @Table(indexes = {
         @Index(columnList = "content"),
         @Index(columnList = "createdAt"),
@@ -26,6 +26,10 @@ public class ArticleComment extends AuditingFields {
     private Article article; //게시글 (ID)
 
     @Setter
+    @ManyToOne(optional = false)
+    private UserAccount userAccount; // user 정보 (ID)
+
+    @Setter
     @Column(nullable = false, length = 500)
     private String content; // 본문
 
@@ -35,13 +39,14 @@ public class ArticleComment extends AuditingFields {
 
     }
 
-    private ArticleComment(Article article, String content) {
+    private ArticleComment(Article article, UserAccount userAccount, String content) {
+        this.userAccount = userAccount;
         this.article = article;
         this.content = content;
     }
 
-    public static ArticleComment of(Article article, String content) {
-       return new ArticleComment(article,content);
+    public static ArticleComment of(Article article,UserAccount userAccount, String content) {
+       return new ArticleComment(article, userAccount ,content);
     }
 
     @Override
@@ -54,5 +59,8 @@ public class ArticleComment extends AuditingFields {
     @Override
     public int hashCode() {
         return 0;
+    }
+
+    public void setParentCommentId(Long id) {
     }
 }
